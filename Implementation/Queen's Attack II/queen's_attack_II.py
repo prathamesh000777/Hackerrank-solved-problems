@@ -43,7 +43,7 @@ import random
 import re
 import sys
 
-# Complete the queensAttack function below.
+#Helper function
 def nearest_pos(i,queens_loc,max_left,min_right):
     #checks if the element is to the left(i < queens_loc) and if it is the closest to the left of queen by checking then update max_left
     if (i < queens_loc) and (i > max_left): 
@@ -53,10 +53,12 @@ def nearest_pos(i,queens_loc,max_left,min_right):
         min_right = i
     return max_left,min_right
 
+#helper function
 def pos_count(max_left,min_right,queens_loc):
     #calculate the blocks available to move for the queen.
     return (queens_loc - max_left - 1) + (min_right - queens_loc - 1)
 
+# Complete the queensAttack function below.
 def queensAttack(n, k, r_q, c_q, obstacle):
     # Calculate the y-intercept(c = y - mx)
     fl_c = r_q - c_q      #forwardline y-intercept
