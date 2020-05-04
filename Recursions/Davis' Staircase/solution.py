@@ -28,6 +28,8 @@ def cal(loc,count_1,count_2,count_3):
     count_1 = total number of steps with size = 1
     count_2 = total number of steps with size = 2 
     count_3 = total number of steps with size = 3
+    ways,x = loc!/(loc-(count_2+count_3)!*count_2!*count_3!  #the formula for number of ways to arrange the steps with repeating step 2
+    and step 3 repeating.
     '''
     x = int(math.factorial(loc)/(math.factorial(loc - (count_2+count_3))*math.factorial(count_2)*math.factorial(count_3)))
     return x
